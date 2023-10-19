@@ -9,3 +9,5 @@ dotenv_path = find_dotenv()
 load_dotenv(dotenv_path)
 
 pd.set_option('display.max_columns', None)
+
+#POST "https://accounts.spotify.com/api/token" \
