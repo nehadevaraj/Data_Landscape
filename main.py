@@ -1,13 +1,17 @@
 
-import requests
-import pandas as pd
-import numpy as np
+#import requests
+#import pandas as pd
+#import numpy as np
+
+from dotenv import load_dotenv #reading key values
 import os
-from dotenv import load_dotenv, find_dotenv #reading key values
 
-dotenv_path = find_dotenv()
-load_dotenv(dotenv_path)
+#dotenv_path = find_dotenv()
+load_dotenv()
 
-pd.set_option('display.max_columns', None)
+client_id= os.getenv("CLIENT_ID")
+client_secret= os.getenv("CLIENT_SECRET")
+
+print(client_id,client_secret) #print statement
 
 #POST "https://accounts.spotify.com/api/token" \
