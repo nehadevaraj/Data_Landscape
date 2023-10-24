@@ -1,7 +1,8 @@
 import base64
+import random
 import webbrowser
 from urllib.parse import urlencode
-import random
+from requests import get, post
 client_id = "bf9ae963bd6e4ba399cb411df7c2ed27"
 client_secret = "ef91f6595ba14e36b834f348d3acf68d"
 
@@ -19,5 +20,8 @@ auth_headers = {
     "scope": " ".join(SCOPES),
     "state": random.randint(0,16)
 }
+
+print(get("https://accounts.spotify.com/authorize?" + urlencode(auth_headers)).url)
+
 
 webbrowser.open("https://accounts.spotify.com/authorize?" + urlencode(auth_headers))
