@@ -25,3 +25,5 @@ print(get("https://accounts.spotify.com/authorize?" + urlencode(auth_headers)).u
 
 
 webbrowser.open("https://accounts.spotify.com/authorize?" + urlencode(auth_headers))
+
+#no changes?
